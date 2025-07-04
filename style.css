@@ -1,0 +1,351 @@
+
+:root {
+  --dark-navy: #021024;
+  --deep-blue: #052659;
+  --medium-blue: #5483B3;
+  --light-blue: #7DA0CA;
+  --very-light-blue: #C1E8FF;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--very-light-blue);
+  color: var(--dark-navy);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+
+/* Header */
+header {
+  background: var(--very-light-blue);
+  border-bottom: 1px solid var(--medium-blue);
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-navy);
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+nav a {
+  font-size: 1rem;
+  color: var(--deep-blue);
+  transition: color 0.3s ease;
+}
+nav a:hover,
+nav a.active {
+  color: var(--medium-blue);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  background: var(--light-blue);
+  gap: 30px;
+}
+.hero-text {
+  max-width: 500px;
+  color:var(--light-blue)
+}
+.hero-text h2 {
+  color: white 
+}
+
+.hero-text p {
+  color: white 
+}
+
+.hero {
+  position: relative;
+  background-image: url('your-image.jpg'); /* مسیر درست عکس */
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* خیلی مهم که متن روی عکس بیاد */
+  color: white; /* متن سفید برای دیده شدن روی عکس تیره */
+  padding: 80px;
+}
+.hero-content p {
+  margin-bottom: 50px; /* اینجا فاصله درست می‌ذاری */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* لایه تیره برای بهتر دیده شدن متن */
+  z-index: 1;
+}
+
+.hero-text  {
+  position: relative;
+  z-index: 2;
+  color: var(--light-blue) /* فقط متن سفید */
+}
+
+.btn {
+  background-color: #5483B3;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  
+}
+
+.btn:hover {
+  background-color:#021024;
+}
+.btn:hover {
+  background-color: var(--dark-navy);
+}
+
+/* Services Section */
+.services {
+  padding: 60px 40px;
+  background: var(--light-blue);
+  text-align: center;
+}
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--dark-navy);
+}
+.service-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(2,16,36,0.1);
+  max-width: 300px;
+  text-align: left;
+}
+.card h3 {
+  margin-top: 15px;
+  color: var(--deep-blue);
+}
+
+/* Clients Section */
+.clients {
+  padding: 60px 40px;
+  background: var(--medium-blue);
+  text-align: center;
+}
+.clients h2 {
+  font-size: 2rem;
+  color: var(--very-light-blue);
+  margin-bottom: 30px;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logos img {
+  width: 150px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+/* About Section  */
+.about-section  {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: var(--light-blue);
+
+}
+.about-section h2 {
+  font-size: 2rem;
+  color: var(--dark-navy);
+  margin-bottom: 20px;
+}
+.about-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: var(--deep-blue);
+}
+.about-section img {
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 80px 40px;
+  background: var(--very-light-blue);
+  text-align: center;
+}
+.portfolio-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--dark-navy);
+}
+.portfolio-section p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: var(--deep-blue);
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-card {
+  max-width: 300px;
+  width: 100;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(2,16,36,0.1);
+}
+.project-card h3 {
+  margin-top: 15px;
+  color: var(--white);
+}
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--deep-blue);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 40px;
+  background: var(--medium-blue);
+  text-align: center;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  color: var(--very-light-blue);
+  margin-bottom: 30px;
+}
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact-form button {
+  background: var(--dark-navy);
+  color: var(--very-light-blue);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: var(--light-blue);
+  color: var(--dark-navy);
+}
+
+/* Social Media Section */
+.social-media {
+  margin-top: 40px;
+  text-align: center;
+}
+.social-media h3 {
+  color: var(--deep-blue);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.social-icons a {
+  color: var(--dark-navy);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--light-blue);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-navy);
+  color: var(--very-light-blue);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .service-cards, .projects, .logos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
